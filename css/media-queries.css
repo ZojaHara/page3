@@ -1,0 +1,54 @@
+@media all and (max-width: 767px) {
+
+
+		.main-nav .list-menu {
+			border-bottom: 3px solid rgb(127, 0, 127);
+			border-right:0px;
+			border-left:0px;
+		}
+		.list-menu:last-of-type {
+			border-bottom:0px;
+		}
+
+		 .main-nav .hideBox2 {
+		 	display:none;
+		 }
+
+		 .main-nav .hideBox1 {
+		 	display:block;
+		 }
+
+		.list-menu {
+			padding:1.3em 0;
+		}
+
+		.who-section-params {
+			font-size: 7.5vmin;
+		}
+			.central-element {
+				font-size: 8.5vmin;
+			}
+
+
+
+		.top {
+			top:0;
+		}
+		
+		.left {
+			left:0;
+		}
+		.right {
+			right:0;
+		}
+
+
+		.interactive-stick:before, .interactive-stick:after {
+			display:none;
+		}
+
+		.options-text {
+			font-size: 4.5vmin;
+		}
+}
+
