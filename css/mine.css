@@ -436,8 +436,9 @@ section {
 		background-position: 80% 0;
 	}
 	.background-pic-5 {
-		background: url("../pic/paris.svg") no-repeat;
+		background: url("../pic/architecture.svg") no-repeat;
 		background-size:contain;
+		background-position: center;
 	}
 
 
