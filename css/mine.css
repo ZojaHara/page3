@@ -16,7 +16,7 @@
 	width:3px;
 	background:rgba(0,0,0,.7);
 	position:absolute;
-}	
+}
 
 .arrow {
 	height:24px;
@@ -43,7 +43,7 @@
 	-ms-transform: rotate(-45deg);
 	-webkit-transform: rotate(-45deg);
 	transform: rotate(-45deg);
-}											
+}
 
 .hidden {
 	display:none;
@@ -119,7 +119,7 @@ section {
 	background-size: cover;
 	font-family: 'Amatic SC', cursive;
 }
-	
+
 				/*Menu styles*/
 
 	.menu {
@@ -188,14 +188,14 @@ section {
 		.hideBox1 {
 			display: none;
 		}
- 
+
 
 		.hideBox1,.hideBox2 {
 			position:absolute;
 			top:5px;
 			right:20px;
 		}
-	
+
 		.hideBox1:before,.hideBox2:before, .hideBox1:after,.hideBox2:after {
   			content: "";
   			position: absolute;
@@ -217,7 +217,7 @@ section {
 
 		.hideBox1:hover::before,.hideBox2:hover::before, .hideBox1:hover::after,.hideBox2:hover::after{
 			background:rgb(255,255,120);
-		} 
+		}
 
 					/*Header styles*/
 
@@ -358,7 +358,7 @@ section {
 				/*End of the "for who" section*/
 				/*Beggining of the "the best option" section*/
 
-				
+
 .why-section-params {
 	background: rgb(255,255,255);
 	color: rgba(15,95,135,1);
@@ -407,7 +407,7 @@ section {
 	.options:hover .right {
 		right:0;
 	}
-	
+
 		.options-text {
 			font-family: 'Archivo Narrow', sans-serif;
 			padding:.5em;
@@ -486,7 +486,7 @@ section {
 
 		table {
 			width:100%;
-			color: rgba(20,80,90,1);	
+			color: rgba(20,80,90,1);
 		}
 			th,td {
 				border:1px dashed rgba(15,95,135,.8);
@@ -590,7 +590,7 @@ section {
  		width:100%;
  		margin:5vmin 0;
  		border:none;
- 		background:inherit;
+ 		background:rgb(127, 0, 127);
  		padding:.4em;
  		color:rgb(255,255,255)
  	}
