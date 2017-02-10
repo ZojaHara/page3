@@ -5,30 +5,40 @@
 	var hiddenX = document.querySelectorAll(".jsClick");
 	var menu = document.querySelector(".menu");
 	var nav = document.querySelector("#menu");
+	var mainNav = document.querySelector(".main-nav");
 
 	if(nav.offsetTop > 0) {
 		menu.style.opacity="0";
-	};
+	}
 
 	menu.addEventListener("click", function() {
 		menu.style.opacity="0";
+		mainNav.style.top = "0%";
 	}, false);
 
-	for(var i=0; i<hiddenX.length; i++) {
+	// for(var i=0; i<hiddenX.length; i++) {
+	//
+	// 	hiddenX[i].addEventListener("click", function() {
+	// 		menu.style.opacity="1";
+	// 	}, false);
+	// }
 
-		hiddenX[i].addEventListener("click", function() {
+	hiddenX.forEach(function(elem) {
+		elem.addEventListener("click", function() {
 			menu.style.opacity="1";
+			mainNav.style.top = "-200%";
 		}, false);
-	};
+	}
+);
 
 
 
 //Button scroll up
-	var upArrow = document.querySelector(".up");
+	var upArrow = document.querySelector(".go-up");
 
 	window.addEventListener("scroll", function() {
 
-		var scrollUp = document.documentElement.scrollTop || document.body.scrollTop; 
+		var scrollUp = document.documentElement.scrollTop || document.body.scrollTop;
 
 		if(scrollUp>=700) {
 			upArrow.classList.remove("hidden");
@@ -39,12 +49,12 @@
 	},false);
 
 	function smoothScroll() {
-		var scrollUp = document.documentElement.scrollTop || document.body.scrollTop; 
+		var scrollUp = document.documentElement.scrollTop || document.body.scrollTop;
 		if(scrollUp>0) {
 			window.scrollBy(0, -30);
-			setTimeout(smoothScroll, .1);
+			setTimeout(smoothScroll, 0.1);
 		}
-	};
+	}
 
 	upArrow.addEventListener("click",function(e) {
 
@@ -65,7 +75,6 @@ form.addEventListener("submit",function(e){
 		errors = [];
 
 	e.preventDefault();
-
 
 	for(var i=0; i<fields.length; i++) {
 
@@ -89,6 +98,8 @@ form.addEventListener("submit",function(e){
 		}
 
 },false);
+
+mainNav.style.top = "-200%";
 
 
 

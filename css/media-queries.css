@@ -34,7 +34,7 @@
 		.top {
 			top:0;
 		}
-		
+
 		.left {
 			left:0;
 		}
@@ -43,12 +43,14 @@
 		}
 
 
-		.interactive-stick:before, .interactive-stick:after {
-			display:none;
-		}
-
 		.options-text {
 			font-size: 4.5vmin;
 		}
 }
 
+
+@media all and (max-width:1025px) {
+	.interactive-stick:before, .interactive-stick:after {
+		display:none;
+	}
+}

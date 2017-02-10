@@ -1,6 +1,6 @@
 
 	/*Arrow up*/
-.up {
+.go-up {
 	background: transparent;
 	position:fixed;
 	bottom:1vmin;
@@ -10,6 +10,24 @@
 	height:40px;
 	border: 2px solid rgba(15,95,135,1);
 	border-radius:50%;
+	cursor: pointer;
+	-webkit-animation: up-down 1s linear infinite;
+	animation: up-down 2s linear infinite;
+}
+
+@-webkit-keyframes up-down {
+	100% {
+		bottom:3vmin;
+	}
+}
+
+@keyframes up-down {
+	50% {
+		bottom:3vmin;
+	}
+	100% {
+		bottom:1vmin;
+	}
 }
 
 .arrow, .arrow:before, .arrow:after {
@@ -133,18 +151,16 @@ section {
 		transition:opacity .5s;
 		font-size: 7.5vmin;
 	}
-/*	.menu:hover {
-		color:rgb(150,150,220);
-	}*/
 
 	.main-header, .main-nav {
 		border-radius: 15px;
 		letter-spacing: .3em;
 	}
 
-	.main-nav:target {
-		top:0;
+	.main-nav {
 		z-index: 9999;
+		-webkit-transition: top 1s;
+		transition: top 1s;
 	}
 
 
@@ -189,27 +205,26 @@ section {
 			display: none;
 		}
 
-
 		.hideBox1,.hideBox2 {
 			position:absolute;
-			top:5px;
-			right:20px;
+			top:1.5vmin;
+			right:5vmin;
 		}
 
-		.hideBox1:before,.hideBox2:before, .hideBox1:after,.hideBox2:after {
+		.hideBox1::before,.hideBox2::before, .hideBox1::after,.hideBox2::after {
   			content: "";
   			position: absolute;
-  			height: 24px;
-  			width: 5px;
+  			height: 6vmin;
+  			width: 1vmin;
   			background-color: rgb(205, 124, 205);
 		}
-		.hideBox1:before, .hideBox2:before {
+		.hideBox1::before, .hideBox2::before {
 			-ms-transform: rotate(45deg);
 			-webkit-transform: rotate(45deg);
 			transform: rotate(45deg);
 		}
 
-		.hideBox1:after, .hideBox2:after {
+		.hideBox1::after, .hideBox2::after {
 			-ms-transform: rotate(-45deg);
 			-webkit-transform: rotate(-45deg);
 			transform: rotate(-45deg);
@@ -479,16 +494,16 @@ section {
 				padding:.5em 0;
 			}
 
-		.concrete-proposition-table {
+		.concrete-proposition-paragraph {
 			font-size: 4.2vmin;
 			padding: .7em;
 		}
 
-		table {
+		.table {
 			width:100%;
 			color: rgba(20,80,90,1);
 		}
-			th,td {
+			.table th,td {
 				border:1px dashed rgba(15,95,135,.8);
 			}
 			.small-print {
@@ -543,7 +558,7 @@ section {
 .contact-section-params {
 	background-color: rgb(127, 0, 127);
 	color:rgb(255, 255, 83);
-	font-size: 5vmin;
+	font-size: 6vmin;
 }
 
 
