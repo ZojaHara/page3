@@ -16,22 +16,15 @@
 		mainNav.style.top = "0%";
 	}, false);
 
-	// for(var i=0; i<hiddenX.length; i++) {
-	//
-	// 	hiddenX[i].addEventListener("click", function() {
-	// 		menu.style.opacity="1";
-	// 	}, false);
-	// }
 
-	hiddenX.forEach(function(elem) {
-		elem.addEventListener("click", function() {
-			menu.style.opacity="1";
-			mainNav.style.top = "-200%";
-		}, false);
-	}
-);
+var hideX = function() {
+	menu.style.opacity="1";
+	mainNav.style.top = "-200%";
+};
 
-
+for(var i=0; i<hiddenX.length; i++) {
+	hiddenX[i].addEventListener("click", hideX, false);
+}
 
 //Button scroll up
 	var upArrow = document.querySelector(".go-up");
