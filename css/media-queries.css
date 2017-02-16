@@ -42,9 +42,49 @@
 			right:0;
 		}
 
+/*Visibility rules*/
+		.main-nav {
+			font-size: 6.5vmin;
+		}
+				.hideBox1::before, .hideBox2::before, .hideBox1::after, .hideBox2::after {
+					height: 9vmin;
+				}
+		.menu {
+			font-size: 9vmin;
+		}
+
+		.headings-2 {
+			font-size: 8.5vmin;
+		}
+		.subheading {
+			font-size: 7vmin;
+		}
+		.contact-link {
+			font-size: 7vmin;
+		}
 
 		.options-text {
-			font-size: 4.5vmin;
+			font-size: 6vmin;
+		}
+		.the-best-option {
+			font-size: 6.5vmin;
+		}
+
+		.concrete-proposition {
+			font-size: 5.5vmin;
+		}
+		.concrete-proposition-paragraph {
+			font-size: 5.2vmin;
+		}
+
+		.table {
+			font-size: 4.7vmin;
+		}
+		.contact-section-params {
+			font-size: 8vmin;
+		}
+		.tel-skype-number {
+			font-size: 10vmin;
 		}
 }
 
