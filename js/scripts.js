@@ -5,19 +5,79 @@
 	var hiddenX = document.querySelectorAll(".jsClick");
 	var menu = document.querySelector(".menu");
 	var nav = document.querySelector("#menu");
-	var mainNav = document.querySelector(".main-nav");
+	var jsScroll = document.querySelectorAll(".jsScroll");
 
-	if(nav.offsetTop > 0) {
-		menu.style.opacity="0";
-	}
+	var mainNav = document.querySelector(".main-nav-container");
+	var sideMenu = document.querySelector(".side-menu");
+	//
+	var whoSection = document.querySelector("#who").getBoundingClientRect().top;
+	console.log(whoSection);
 
-	menu.addEventListener("click", function() {
+	var scrollElem = document.documentElement.scrollTop || document.body.scrollTop;
+	var scrollAll = window.pageYOffset + "px";
+
+	//
+
+	//
+	// if(nav.offsetTop > 0) {
+	// 	menu.style.opacity="0";
+	// }
+
+	menu.addEventListener("click", function(e) {
+		e.preventDefault();
 		menu.style.opacity="0";
-		mainNav.style.top = "0%";
+		mainNav.style.top = "0";
+		mainNav.style.position="fixed";
 	}, false);
 
+// function scrolling() {
+// 	menu.style.top = window.pageYOffset + "px";
+// 	if(menu.style.top === whoSection) {
+// 		menu.style.background = "black";
+// 		menu.style.textAlign = "center";
+// 	}
+// }
+// window.addEventListener("scroll", scrolling, false);
 
-var hideX = function() {
+function whoScroll(e) {
+	if((document.documentElement.scrollTop || document.body.scrollTop) > whoSection) {
+		// menu.style.background = "black";
+		// menu.style.left = 0;
+		menu.classList.add("scroll-menu");
+
+	}else {
+		menu.classList.remove("scroll-menu");
+	}
+}
+window.addEventListener("scroll", whoScroll, false);
+
+	// sideMenu.addEventListener("click", function() {
+	// 	mainNav.style.top = sideMenu.style.top;
+	// }, false);
+
+
+
+	
+// forEach don't work in IE 11
+	// jsScroll.forEach(function(elem) {
+	// 	elem.addEventListener("click", function() {
+	// 		mainNav.style.top = "-200%";
+	// 		menu.style.opacity=1;
+	// 	});
+	// });
+
+	function navHide() {
+		mainNav.style.top = "-200%";
+		menu.style.opacity=1;
+	}
+
+	for(var k=0; k<jsScroll.length;k++) {
+		jsScroll[k].addEventListener("click", navHide, false);
+	}
+
+
+var hideX = function(e) {
+	e.preventDefault();
 	menu.style.opacity="1";
 	mainNav.style.top = "-200%";
 };
@@ -27,34 +87,31 @@ for(var i=0; i<hiddenX.length; i++) {
 }
 
 //Button scroll up
-	var upArrow = document.querySelector(".go-up");
-
-	window.addEventListener("scroll", function() {
-
-		var scrollUp = document.documentElement.scrollTop || document.body.scrollTop;
-
-		if(scrollUp>=700) {
-			upArrow.classList.remove("hidden");
-		}else {
-			upArrow.classList.add("hidden");
-		}
-
-	},false);
-
-	function smoothScroll() {
-		var scrollUp = document.documentElement.scrollTop || document.body.scrollTop;
-		if(scrollUp>0) {
-			window.scrollBy(0, -30);
-			setTimeout(smoothScroll, 0.1);
-		}
-	}
-
-	upArrow.addEventListener("click",function(e) {
-
-		e.stopPropagation();
-		smoothScroll();
-
-	},false);
+	// var upArrow = document.querySelector(".go-up");
+	//
+	// window.addEventListener("scroll", function() {
+	//
+	// 	if(scrollElem>=700) {
+	// 		upArrow.classList.remove("hidden");
+	// 	}else {
+	// 		upArrow.classList.add("hidden");
+	// 	}
+	//
+	// },false);
+	//
+	// function smoothScroll() {
+	// 	if(scrollElem>0) {
+	// 		window.scrollBy(0, -30);
+	// 		setTimeout(smoothScroll, 0.1);
+	// 	}
+	// }
+	//
+	// upArrow.addEventListener("click",function(e) {
+	//
+	// 	e.stopPropagation();
+	// 	smoothScroll();
+	//
+	// },false);
 
 //Form validation
 

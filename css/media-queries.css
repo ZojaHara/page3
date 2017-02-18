@@ -1,6 +1,23 @@
+@media all and (max-width: 699px) {
+	.side-menu {
+		width:14vmin;
+		height:13vmin;
+	}
+}
+
+@media all and (min-width:700px) and (max width:850px) {
+	.side-menu {
+		width:11vmin;
+		height:10vmin;
+	}
+}
+
 @media all and (max-width: 767px) {
-
-
+		.menu {
+			width:22%;
+			padding: 4%;
+			font-size: 7.5vmin;
+		}
 		.main-nav .list-menu {
 			border-bottom: 3px solid rgb(127, 0, 127);
 			border-right:0px;
