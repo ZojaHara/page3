@@ -40,7 +40,7 @@
 		}
 
 		.who-section-params {
-			font-size: 7.5vmin;
+			font-size: 35px;
 		}
 			.central-element {
 				font-size: 8.5vmin;
@@ -48,16 +48,6 @@
 
 
 
-		.top {
-			top:0;
-		}
-
-		.left {
-			left:0;
-		}
-		.right {
-			right:0;
-		}
 
 /*Visibility rules*/
 		.main-nav {
@@ -81,10 +71,17 @@
 		}
 
 		.options-text {
-			font-size: 6vmin;
+			font-size: 24px;
 		}
 		.the-best-option {
 			font-size: 6.5vmin;
+		}
+		.headings-2 {
+			background:rgba(255,255,255,.7);
+		}
+
+		.background-div {
+				height:auto;
 		}
 
 		.concrete-proposition {
@@ -100,7 +97,7 @@
 		.contact-section-params {
 			font-size: 8vmin;
 		}
-		.tel-skype-number {
+		.tel-mail-number {
 			font-size: 10vmin;
 		}
 }
@@ -110,4 +107,23 @@
 	.interactive-stick:before, .interactive-stick:after {
 		display:none;
 	}
+}
+
+@media all and (max-width:1200px) {
+	.top {
+		top:0;
+	}
+
+	.left {
+		left:0;
+	}
+	.right {
+		right:0;
+	}
+
+	.why-tip {
+		display: none;
+	}
+
+
 }

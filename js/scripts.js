@@ -2,6 +2,7 @@
 
 	var hiddenX = document.querySelectorAll(".jsClick");
 	var menu = document.querySelector(".menu");
+	var menuHeight = menu.getBoundingClientRect().height;
 	var nav = document.querySelector("#menu");
 	var jsScroll = document.querySelectorAll(".jsScroll");
 
@@ -18,8 +19,9 @@
 		mainNav.style.position="fixed";
 	}, false);
 
+
 function whoScroll(e) {
-	if((document.documentElement.scrollTop || document.body.scrollTop) > whoSection) {
+	if((document.documentElement.scrollTop || document.body.scrollTop) > whoSection - menuHeight) {
 		menu.classList.add("scroll-menu");
 	}else {
 		menu.classList.remove("scroll-menu");
@@ -65,6 +67,7 @@ form.addEventListener("submit",function(e){
 		errorMessage = document.querySelector(".error-message"),
 		thanksMessage = document.querySelector(".thanks-message"),
 		errors = [];
+		emailCkeck = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
 	e.preventDefault();
 
@@ -72,11 +75,11 @@ form.addEventListener("submit",function(e){
 
 		var field = fields[i];
 
-			if(field.type==="text" && field.value===""){
+			if(field.type==="text" && (field.value==="" || field.value.length>30)){
 				errors.push(field);
-			} else if(field.type==="email" && field.value.indexOf("@") === -1) {
+			} else if(field.type==="email" && !(emailCkeck.test(field.value)) ) {
 				errors.push(field);
-			} else if(field.type==="textarea" && field.value.length<4) {
+			} else if(field.type==="textarea" && (field.value.length<10 || field.value.length>1500)) {
 				errors.push(field);
 			}
 		}
